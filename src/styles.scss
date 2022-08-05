@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width:524){
+  .header
+  {
+    text-align: center;
+    font-size: 70pt;
+  }
+}
+@media screen and (min-width:525){
+  .header{
+    font-size: 100pt;
+    text-align: left;
+  }
+}
+
+body
+{
+  margin: 0px;
+}
+
+.header{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: #c9884e;
+  font-size: 100pt;
+  // font-size: 16vw;
+  margin: 2px;
+}
+
+.bodytxt{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: #c9884e;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: black;
+}
+::-webkit-scrollbar
+{
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 25px;
+  background: #3b3b3b;
+  // border: white solid 0.3px;
+  transition: all 10ms0.7s;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  // border: solid #c9884e 1px;
+  background: #c9884e;
+}
+
+::selection
+{
+  background: #c9884e;
+}
+
+::-moz-selection
+{
+  background: #c9884e;
+}
+
+.bg_black
+
+{
+  background-color: black;
+  margin: 0px;
+  padding: 12px 0px 12px 0px;
+
+}

@@ -5,4 +5,95 @@
   background-color: #646464;
   // todo change the banner to a pciture
   margin: 0px;
+  background-image: url(../../assets/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.f_products
+{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1%;
+}
+.featured_content
+{
+  display: grid;
+  grid-template-rows: auto auto;
+  margin: 0px 1%;
+}
+
+.f_products div
+{
+  aspect-ratio: 1/1;
+  background-color: #646464;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+  padding: 5px;
+  // box-sizing: content-box;
+
+}
+
+.f_products div:hover
+{
+  transform: scale(103%) translateZ(30px);
+  // padding: 10px;
+}
+
+
+ a{
+  text-decoration: none;
+  color:black;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.prodtxt{
+  margin: 0px;
+  color: black;
+  font-weight: 400;
+}
+.f_prod .prodtxt{
+  // color: #c9884e;
+  transition: all 0.5s;
+}
+
+.f_prod:hover .prodtxt{
+  color: #c9884e;
+
+}
+
+.price::before{
+  content: "$";
+  // font-size: large;
+}
+.price{
+  content: "$";
+  font-size:xx-large;
+
+}
+.name{
+  text-align: right;
+  font-size: x-large;
+}
+
+.f_banner{
+  width: 100%;
+  aspect-ratio: 4/1;
+  background-color: #646464;
+  border-radius: 14px;
+  margin-top: 1%;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
+}
+
+.f_banner:hover{
+  transform: scale(101%) translateZ(30px);
 }

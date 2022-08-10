@@ -8,11 +8,15 @@
 
 <div class="bg_black">
   <h1 class="header">Featured</h1>
-  <div class="fearured_content">
-    <div class="f_products"></div>
+  <div class="featured_content">
+    <div class="f_products">
+      <a [routerLink]="'product/'+i.id" *ngFor="let i of featured" ><div class="f_prod" [ngStyle]="{'background-image':'url('+i.image+')'}">
+        <h1 class="prodtxt price">{{i.price}}</h1>
+        <p class="prodtxt name">{{i.name}}</p>
+      </div></a>
+    </div>
+    <div class="f_banner" [ngStyle]="{'background-image':'url('+banner+')'}"></div>
     <!-- use ng for on products -->
     <div class="featured_banner"></div>
   </div>
 </div>
-
-

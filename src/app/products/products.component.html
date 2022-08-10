@@ -1,7 +1,19 @@
 <div class="bg_black">
-  <h1 class="header">Catergory</h1>
+  <h1 class="header">Category</h1>
   <div class="prod">
-    <div class="filter"></div>
-    <div class="products"></div>
+    <div class="filter">
+      <p class="bodytxt subheader">filter</p>
+      <hr class="breaker">
+      <label for="sorting">
+        <!-- add code to this later -->
+      </label>
+
+    </div>
+    <div class="products">
+      <a [routerLink]="'product/'+i.id" *ngFor="let i of prod" ><div class="product" [ngStyle]="{'background-image':'url('+i.image+')'}">
+        <h1 class="prodtxt price">{{i.price}}</h1>
+        <p class="prodtxt name">{{i.name}}</p>
+      </div></a>
+    </div>
   </div>
 </div>

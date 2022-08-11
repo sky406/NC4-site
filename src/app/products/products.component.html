@@ -4,9 +4,62 @@
     <div class="filter">
       <p class="bodytxt subheader">filter</p>
       <hr class="breaker">
-      <label for="sorting">
-        <!-- add code to this later -->
-      </label>
+      <div class="selector">
+        <label class="sort-labels" for="sort-by">Sort by:</label>
+          <div id="sort-by" class="radios">
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+          </div>
+      </div>
+      <div class="selector">
+        <label class="sort-labels"> price:</label>
+          <div class="slidecontainer">
+            <input type="range" min="1" max="1000" value="50" class="slider" id="myRange" [(ngModel)]="slideroutput">
+            <span class="bodytxt">${{slideroutput}} </span>
+            <!-- fix the slider later -->
+          </div>
+      </div>
+
+      <div class="selector">
+        <label class="sort-labels" for="sort-by">Lorem ipsum:</label>
+          <div id="sort-by" class="radios">
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+            <label class="radio-container bodytxt selecttxt">
+              lorem
+              <input type="radio" checked="checked" name="sort"/>
+              <span class="radion"></span>
+            </label>
+          </div>
+      </div>
+
 
     </div>
     <div class="products">

@@ -1,0 +1,26 @@
+<div class="review" [ngClass]="{'collapsed':!expanded,'expanded':expanded}">
+  <div class="name-title">
+    <div class="pfp" [ngStyle]="{'background-image':'url('+review.userimage+')'}"></div>
+
+    <div class="info">
+
+      <div class="inline">
+        <h1 class="title">{{review.title}}</h1>
+        <p class="uname bodytxt">by {{review.username}}</p>
+      </div>
+
+      <div class="rating">
+        <div class="star star{{star}}" *ngFor="let star of rating"></div>
+      </div>
+    </div>
+
+  </div>
+  <p>{{review.review}}</p>
+  <div class="readmore" (click)="expand()">
+    <p *ngIf="expanded; else up">see less</p>
+    <ng-template #up>
+      <p>see more</p>
+    </ng-template>
+    <div class="arrow"></div>
+  </div>
+</div>

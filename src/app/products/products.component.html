@@ -63,7 +63,7 @@
 
     </div>
     <div class="products">
-      <a [routerLink]="'product/'+i.id" *ngFor="let i of prod" ><div class="product" [ngStyle]="{'background-image':'url('+i.image+')'}">
+      <a [routerLink]="'../product/'+i.id" *ngFor="let i of prod" ><div class="product" [ngStyle]="{'background-image':'url('+i.image+')'}">
         <h1 class="prodtxt price">{{i.price}}</h1>
         <p class="prodtxt name">{{i.name}}</p>
       </div></a>

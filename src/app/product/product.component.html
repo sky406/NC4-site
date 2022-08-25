@@ -1,1 +1,38 @@
-<p>product works!</p>
+<div class="bg_black">
+  <div class="product">
+    <div class="images">
+      <!-- <img src="{{prod.image}}" alt="{{prod.name}}" class="mainimg"> -->
+      <div class="mainimg img" [ngStyle]="{'background-image':'url('+prod.image+')'}"></div>
+      <div class="other_imgs">
+        <!-- <img src="{{prod.image}}" alt="{{prod.name}}" *ngFor="let pic of pics"/> -->
+        <div class="img" *ngFor="let pic of pics" [ngStyle]="{'background-image':'url('+pic+')'}"></div>
+      </div>
+    </div>
+    <div class="info">
+      <h1 class="name header">{{prod.name}}</h1>
+      <h2 class="price">{{prod.price}}</h2>
+
+      <div class="rating">
+        <div class="star star{{star}}" *ngFor="let star of starify(prod.rating)"></div>
+        <p class="reviewcount bodytxt"[innerText]="reviews.length+' reviews'"></p>
+      </div>
+      <div class="quantity">
+        <span class="bodytxt quant">quantity</span>
+        <button class="quantbutt minus" (click)="addless()"></button>
+        <span class="bodytxt quant">{{quantity}}</span>
+        <button class="quantbutt plus" (click)="addmore()"></button>
+      </div>
+      <button class="cart_bttn"><p>add to cart</p></button>
+      <!-- TODO add some functionality -->
+    </div>
+  </div>
+
+  <div class="desc bodytxt"><h1 class="header">about</h1>
+    <p>{{prod.desc}}</p></div>
+</div>
+<div class="reviews">
+  <h1>reviews</h1>
+  <div class="review container">
+    <review *ngFor="let i of reviews" [review]="i" [rating]="starify(i.rating)"></review>
+  </div>
+</div>

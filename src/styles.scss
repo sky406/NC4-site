@@ -18,12 +18,15 @@ body
 }
 
 .header{
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
+
   color: #c9884e;
-  font-size: 100pt;
+  // font-size: 100pt;
+  // font-size: 10em;
+  font-size: 12vw;
   // font-size: 16vw;
   margin: 2px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
 }
 
 .bodytxt{
@@ -72,4 +75,28 @@ body
   margin: 0px;
   padding: 12px 0px 12px 0px;
 
+}
+
+// .star{
+//   // aspect-ratio: 1/1;
+
+// }
+
+@mixin star(){
+  background-position: center;
+  background-size: cover;
+
+}
+.star0{
+ @include star();
+ background-image:url(./assets/Star0.svg)
+}
+.star1{
+  @include star();
+  background-image:url(./assets/Star1.svg)
+}
+
+ .star2{
+  @include star();
+  background-image:url(./assets/Star2.svg)
 }

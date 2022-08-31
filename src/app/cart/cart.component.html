@@ -1,1 +1,18 @@
-<p>cart works!</p>
+<div class="background">
+  <h1 class="head">my cart</h1>
+  <div class="flex-container">
+    <div id="cart">
+      <div *ngFor="let item of cartitems" class="item">
+        <div class="img" [ngStyle]="{'background-image':'url('+item.image+')'}"></div>
+        <div class="product_details">
+          <p>{{item.name}}</p>
+          <button (click)="remove(item.id)"></button>
+        </div>
+      </div>
+    </div>
+    <div id="details">
+      <div id="customer-deets"></div>
+      <div id="subtotal"></div>
+    </div>
+  </div>
+</div>

@@ -5,14 +5,51 @@
       <div *ngFor="let item of cartitems" class="item">
         <div class="img" [ngStyle]="{'background-image':'url('+item.image+')'}"></div>
         <div class="product_details">
-          <p>{{item.name}}</p>
-          <button (click)="remove(item.id)"></button>
+          <div>
+            <span class="name bodytxt">{{item.name}}</span>
+            <button class="close" (click)="remove(item.id)"></button>
+          </div>
+          <div>
+            <span class="price bodytxt">${{item.price}}</span>
+              <div class="quantitycontainer">
+                <span class="bodytxt">quantity</span>
+                <button class="quantbutt minus"></button>
+                <span class="bodytxt quant">1</span>
+                <!-- <span class="bodytxt quant">{{quantity}}</span> -->
+                <!-- for now this doesn't need any code -->
+                <button class="quantbutt plus"></button>
+              </div>
+          </div>
+
+
         </div>
       </div>
     </div>
     <div id="details">
-      <div id="customer-deets"></div>
-      <div id="subtotal"></div>
+      <div id="customer-deets">
+        <div>
+          <p class="bodytxt small">Ship to </p>
+          <p class="bodytxt big">nth road existing place, country</p>
+
+        </div>
+
+        <div>
+          <p class="bodytxt small">pay with: </p>
+          <p class="bodytxt big">visa ending in 1234</p>
+          <button>change</button>
+        </div>
+      </div>
+      <div id="subtotal">
+        <div id="subcon">
+            <p class="bodytxt small">subtotal</p>
+          <div id="pricenpay">
+              <h1 class="bodytxt subtotal">${{totalprice()}}</h1>
+            <div>
+              <button>proceed to checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

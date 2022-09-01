@@ -31,7 +31,7 @@
     <p>{{prod.desc}}</p></div>
 </div>
 <div class="reviews">
-  <h1>reviews</h1>
+  <h1 class="head">reviews</h1>
   <div class="review container">
     <review *ngFor="let i of reviews" [review]="i" [rating]="starify(i.rating)"></review>
   </div>
